@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class SearchCityPage extends PageObject {
     private final static By CITY_INPUT_LOC = By.name("query");
     private final static By SEARCH_RESULTS_LOC = By.xpath("//div[contains(@class,'source-radar')]");
+    private final static By CURRENT_LOCATION_LOC = By.xpath("//div[contains(@class,'current-location')]");
 
     public SearchCityPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait, CITY_INPUT_LOC);
@@ -21,5 +22,15 @@ public class SearchCityPage extends PageObject {
     @Step("Click the first result from the search")
     public void clickFirstResult() {
         getElements(SEARCH_RESULTS_LOC).get(0).click();
+    }
+
+    @Step("Click the current location label")
+    public void clickCurrentLocationLabel() {
+        getElement(CURRENT_LOCATION_LOC).click();
+    }
+
+    @Step("Click the search bar")
+    public void clickSearchBar() {
+        getElement(CITY_INPUT_LOC).click();
     }
 }
