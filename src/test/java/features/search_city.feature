@@ -15,6 +15,6 @@ Feature: Search City
     Then the weather page for '<location>' should be displayed
 
     Examples:
-    | location |
-    | London     |
-    | New York   |
+    | location       |
+    | Montevideo     |
+    | Buenos Aires   |

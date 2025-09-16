@@ -6,12 +6,12 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum Geolocation {
-    LONDON("London", 51.507351d, -0.127758d),
-    NEW_YORK("New York", 40.724032d, -73.943975d);
+    BUENOS_AIRES("Buenos Aires", -34.6037f, -58.3816f),
+    MONTEVIDEO("Montevideo", -34.90f, -56.1667f);
 
     private final String name;
-    private final double latitude;
-    private final double longitude;
+    private final float latitude;
+    private final float longitude;
 
     public static Geolocation byName(String name) throws IllegalArgumentException {
         Geolocation returnValue = null;
