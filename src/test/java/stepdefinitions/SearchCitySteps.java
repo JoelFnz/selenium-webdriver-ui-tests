@@ -24,4 +24,14 @@ public class SearchCitySteps extends BaseSteps {
     public void iClickOnTheFirstResult() {
         searchCityPage.clickFirstResult();
     }
+
+    @When("I click the search bar")
+    public void iClickTheSearchBar() {
+        searchCityPage.clickSearchBar();
+    }
+
+    @When("I click the current location label")
+    public void iClickTheCurrentLocationLabel() {
+        searchCityPage.clickCurrentLocationLabel();
+    }
 }

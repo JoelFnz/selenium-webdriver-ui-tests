@@ -20,6 +20,7 @@ public class CityWeatherSteps extends BaseSteps {
     public void isWeatherPageForCityDisplayed(String city) {
         Assert.assertTrue(cityWeatherPage.isPageLoadedAfterWait(), "No city weather webpage was loaded");
         boolean hasCityName = cityWeatherPage.getCityName().contains(city);
-        Assert.assertTrue(hasCityName, "The city weather webpage doesn't contain the expected name: " + city);
+        Assert.assertTrue(hasCityName, "The city weather webpage doesn't contain the expected name: %s. Actual name: %s"
+                                            .formatted(city, cityWeatherPage.getCityName()));
     }
 }
